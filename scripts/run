@@ -1,0 +1,5 @@
+rm -rf sample.o sample
+nasm -f macho64 sample.asm
+ld -macosx_version_min 10.7.0 -lSystem -o sample sample.o
+rm sample.o
+./sample
